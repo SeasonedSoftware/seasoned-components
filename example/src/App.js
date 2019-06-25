@@ -3,7 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'
 import { Card, CardHeader, CardContent } from '@material-ui/core'
 
-import { LinearGradientWrap, Countdown } from 'seasoned-components'
+import { LinearGradientWrap, Countdown, useInterval } from 'seasoned-components'
 import './App.css'
 
 export default () => {
@@ -38,6 +38,8 @@ export default () => {
           </LinearGradientWrap>
           <SyntaxHighlighter language="javascript" style={prism}>
             {`
+import { LinearGradientWrap } from 'seasoned-components'
+
 <LinearGradientWrap
   colors={['#6132CE', '#B73D97', '#DD4E44']}
   deg={315}
@@ -75,6 +77,8 @@ export default () => {
           </button>
           <SyntaxHighlighter language="javascript" style={prism}>
             {`
+import { Countdown } from 'seasoned-components'
+
 <Countdown
   time={time}
   onTick={setCount}
@@ -83,6 +87,19 @@ export default () => {
     setCount('FINISHED')
   }}
 />
+            `}
+          </SyntaxHighlighter>
+        </CardContent>
+      </Card>
+      <Card elevation={5}>
+        <CardHeader title="useInterval" />
+        <CardContent>
+          <SyntaxHighlighter language="javascript" style={prism}>
+            {`
+import { useInterval } from 'seasoned-components'
+
+const tickEverySecond = () => console.log('Hey')
+useInterval(tickEverySecond, 1000)
             `}
           </SyntaxHighlighter>
         </CardContent>
