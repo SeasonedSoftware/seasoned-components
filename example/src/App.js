@@ -36,8 +36,9 @@ export default () => {
               </pre>
             </div>
           </LinearGradientWrap>
-          <SyntaxHighlighter language="javascript" style={prism}>
-            {`
+        </CardContent>
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`
 import { LinearGradientWrap } from 'seasoned-components'
 
 <LinearGradientWrap
@@ -52,8 +53,7 @@ import { LinearGradientWrap } from 'seasoned-components'
   />
 </LinearGradientWrap>
 `}
-          </SyntaxHighlighter>
-        </CardContent>
+        </SyntaxHighlighter>
       </Card>
       <Card elevation={5}>
         <CardHeader title="Countdown" />
@@ -75,8 +75,9 @@ import { LinearGradientWrap } from 'seasoned-components'
           >
             Add +5 seconds
           </button>
-          <SyntaxHighlighter language="javascript" style={prism}>
-            {`
+        </CardContent>
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`
 import { Countdown } from 'seasoned-components'
 
 <Countdown
@@ -87,22 +88,19 @@ import { Countdown } from 'seasoned-components'
     setCount('FINISHED')
   }}
 />
-            `}
-          </SyntaxHighlighter>
-        </CardContent>
+          `}
+        </SyntaxHighlighter>
       </Card>
       <Card elevation={5}>
         <CardHeader title="useInterval" />
-        <CardContent>
-          <SyntaxHighlighter language="javascript" style={prism}>
-            {`
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`
 import { useInterval } from 'seasoned-components'
 
 const tickEverySecond = () => console.log('Hey')
 useInterval(tickEverySecond, 1000)
-            `}
-          </SyntaxHighlighter>
-        </CardContent>
+          `}
+        </SyntaxHighlighter>
       </Card>
     </>
   )
