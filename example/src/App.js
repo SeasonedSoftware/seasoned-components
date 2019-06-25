@@ -3,7 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'
 import { Card, CardHeader, CardContent } from '@material-ui/core'
 
-import { LinearGradientWrap, Countdown, useInterval } from 'seasoned-components'
+import { LinearGradientWrap, Countdown } from 'seasoned-components'
 import './App.css'
 
 export default () => {
