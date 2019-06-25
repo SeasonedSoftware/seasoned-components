@@ -4,10 +4,10 @@ import { useInterval } from '../hooks'
 interface CountdownProps {
   active: boolean
   time: number
-  timeout: number
-  onTick: (t: number) => void
+  timeout?: number
+  onTick?: (t: number) => void
   onFinish: () => void
-  stop: boolean
+  stop?: boolean
 }
 
 const Component = ({
